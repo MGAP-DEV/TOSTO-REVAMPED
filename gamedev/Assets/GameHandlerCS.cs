@@ -47,3 +47,6 @@ public class GameHandler : MonoBehaviour{
         }
 }
 
+public static class Globals {
+        public static string name = "";
+}

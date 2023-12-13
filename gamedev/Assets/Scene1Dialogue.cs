@@ -40,6 +40,7 @@ void Start(){
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+        name = "Bob";
    }
 
 // Use the spacebar as a faster "Next" button:
@@ -60,10 +61,10 @@ public void Next(){
         else if (primeInt == 2){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "HDDD";
-                Char1speech.text = "I have been around these parts for a long time, want me to show you the ropes?";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "(Name)";
+                Char2speech.text = $"Hi, welcome to Tosto, {name}";
                 // Turn off the "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -72,13 +73,43 @@ public void Next(){
                 Choice1c.SetActive(true);
         }
 
+        else if (primeInt == 3){
+                ArtChar1a.SetActive(true);
+                DialogueDisplay.SetActive(true);
+                Char1name.text = $"{name}";
+                Char1speech.text = "Hi!";
+                Char2name.text = "";
+                Char2speech.text = "";
+                primeInt = 6;
+        }
+
+        else if (primeInt == 4){
+                ArtChar1a.SetActive(true);
+                DialogueDisplay.SetActive(true);
+                Char1name.text = $"{name}";
+                Char1speech.text = "Skip";
+                Char2name.text = "";
+                Char2speech.text = "";
+                primeInt = 6;
+        }
+
+        else if (primeInt == 5){
+                ArtChar1a.SetActive(true);
+                DialogueDisplay.SetActive(true);
+                Char1name.text = $"{name}";
+                Char1speech.text = "Leave me alone";
+                Char2name.text = "";
+                Char2speech.text = "";
+                primeInt = 6;
+        }
+
        // after choice 1a
-       else if (primeInt == 20){
+       else if (primeInt == 6){
                 //gameHandler.AddPlayerStat(1);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "HDDD";
-                Char2speech.text = "Laugh it up chuckles, there are a lot worse out there.";
+                Char2name.text = "(Name))";
+                Char2speech.text = "This is the magical land of Tosto where you can find any type of groceries you need.";
                 nextButton.SetActive(false);
                 allowSpace = false;
         }
@@ -98,9 +129,10 @@ public void Next(){
         public void Choice1aFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Yes, my grubby legs can’t stand wandering around";
+                        Char1speech.text = "Hi!";
                         Char2name.text = "";
                         Char2speech.text = "";
+                        primeInt = 3;
                         Choice1a.SetActive(false);
                         Choice1b.SetActive(false);
                         Choice1c.SetActive(false);
@@ -111,10 +143,10 @@ public void Next(){
         public void Choice1bFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Why? Are there more creepy guys like you?";
+                        Char1speech.text = "Leave me alone - screw you";
                         Char2name.text = "";
                         Char2speech.text = "";
-                        primeInt = 19;
+                        primeInt = 4;
                         Choice1a.SetActive(false);
                         Choice1b.SetActive(false);
                         Choice1c.SetActive(false);
@@ -126,7 +158,7 @@ public void Next(){
         public void Choice1cFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Got something else for me?";
+                        Char1speech.text = "Skip(Must beat game first or pay £50)";
                         Char2name.text = "";
                         Char2speech.text = "";
                         primeInt = 29;
