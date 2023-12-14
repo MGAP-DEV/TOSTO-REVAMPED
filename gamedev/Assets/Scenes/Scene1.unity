@@ -221,6 +221,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3327834262963617282, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
   m_PrefabInstance: {fileID: 1768645195}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &346768540 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1566778594670494151, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
+  m_PrefabInstance: {fileID: 593715608586836115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &573447610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1566778594670494151, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
+  m_PrefabInstance: {fileID: 1736241274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &610190349
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1566778594670494151, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Text
-      value: Why? Are there more creepy guys like you?
+      value: txt2
       objectReference: {fileID: 0}
     - target: {fileID: 1570352924444708337, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Name
@@ -391,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 1134978114}
     - target: {fileID: 3180565896817809001, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Choice1bFunct
+      value: ChoicebFunct
       objectReference: {fileID: 0}
     - target: {fileID: 3180565896817809001, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -415,6 +437,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 713665022863477729, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
   m_PrefabInstance: {fileID: 612777092}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &634420700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1566778594670494151, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
+  m_PrefabInstance: {fileID: 612777092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &979962555
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,9 +654,12 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 1929023452}
   ArtChar1a: {fileID: 979962555}
   ArtBG1: {fileID: 1186524896}
-  Choice1a: {fileID: 1725606084}
-  Choice1b: {fileID: 1566380692}
-  Choice1c: {fileID: 1897908012}
+  Choicea: {fileID: 1725606084}
+  ChoiceTxt1: {fileID: 346768540}
+  Choiceb: {fileID: 1566380692}
+  ChoiceTxt2: {fileID: 634420700}
+  Choicec: {fileID: 1897908012}
+  ChoiceTxt3: {fileID: 573447610}
   NextScene1Button: {fileID: 1487120685}
   NextScene2Button: {fileID: 241201004}
   nextButton: {fileID: 1219657346}
@@ -949,7 +985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 713665022863477729, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -463
+      value: -465
       objectReference: {fileID: 0}
     - target: {fileID: 713665022863477729, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -965,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1566778594670494151, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Text
-      value: Got something else for me?
+      value: txt3
       objectReference: {fileID: 0}
     - target: {fileID: 1570352924444708337, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Name
@@ -977,7 +1013,7 @@ PrefabInstance:
       objectReference: {fileID: 1134978114}
     - target: {fileID: 3180565896817809001, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Choice1cFunct
+      value: ChoicecFunct
       objectReference: {fileID: 0}
     - target: {fileID: 3180565896817809001, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1367,7 +1403,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1566778594670494151, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Text
-      value: Yes, my grubby legs can't stand wandering around
+      value: 'txt1
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1570352924444708337, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Name
@@ -1379,7 +1417,7 @@ PrefabInstance:
       objectReference: {fileID: 1134978114}
     - target: {fileID: 3180565896817809001, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Choice1aFunct
+      value: ChoiceaFunct
       objectReference: {fileID: 0}
     - target: {fileID: 3180565896817809001, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

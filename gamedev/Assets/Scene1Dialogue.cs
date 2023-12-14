@@ -20,9 +20,12 @@ public class Scene_1_Dialogue : MonoBehaviour {
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
-        public GameObject Choice1a;
-        public GameObject Choice1b;
-        public GameObject Choice1c;
+        public GameObject Choicea;
+        public Text ChoiceTxt1;
+        public GameObject Choiceb;
+        public Text ChoiceTxt2;
+        public GameObject Choicec;
+        public Text ChoiceTxt3;
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
@@ -34,9 +37,9 @@ void Start(){
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtBG1.SetActive(true);
-        Choice1a.SetActive(false);
-        Choice1b.SetActive(false);
-        Choice1c.SetActive(false);
+        Choicea.SetActive(false);
+        Choiceb.SetActive(false);
+        Choicec.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
@@ -68,9 +71,12 @@ public void Next(){
                 // Turn off the "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
-                Choice1b.SetActive(true); // function Choice1bFunct()
-                Choice1c.SetActive(true);
+                ChoiceTxt1.text = "Hi!";
+                ChoiceTxt2.text = "Skip (Must beat game first or pay £50)";
+                ChoiceTxt3.text = "Screw you";
+                Choicea.SetActive(true); // function ChoiceaFunct()
+                Choiceb.SetActive(true); // function ChoicebFunct()
+                Choicec.SetActive(true);
         }
 
         else if (primeInt == 3){
@@ -126,45 +132,45 @@ public void Next(){
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
-        public void Choice1aFunct(){
+        public void ChoiceaFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Hi!";
                         Char2name.text = "";
                         Char2speech.text = "";
                         primeInt = 3;
-                        Choice1a.SetActive(false);
-                        Choice1b.SetActive(false);
-                        Choice1c.SetActive(false);
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;
                 }
         }
-        public void Choice1bFunct(){
+        public void ChoicebFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Leave me alone - screw you";
                         Char2name.text = "";
                         Char2speech.text = "";
                         primeInt = 4;
-                        Choice1a.SetActive(false);
-                        Choice1b.SetActive(false);
-                        Choice1c.SetActive(false);
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;    
                 }
                 
         }
-        public void Choice1cFunct(){
+        public void ChoicecFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Skip(Must beat game first or pay £50)";
                         Char2name.text = "";
                         Char2speech.text = "";
                         primeInt = 29;
-                        Choice1a.SetActive(false);
-                        Choice1b.SetActive(false);
-                        Choice1c.SetActive(false);
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;
                 }
