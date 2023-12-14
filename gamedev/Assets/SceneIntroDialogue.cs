@@ -57,22 +57,22 @@ void Update(){
 
 //Story Units! The main story function. Players hit [NEXT] to progress to the next primeInt:
 public void Next(){
-        primeInt = primeInt + 1;
         if (primeInt == 1){
                 // audioSource1.Play();
+                primeInt++;
         }
         else if (primeInt == 2){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "(Name)";
-                Char2speech.text = $"Hi, welcome to Tosto, {name}";
+                Char1name.text = $"{name}";
+                Char1speech.text = $"Hi, welcome to Tosto, {name}";
+                Char2name.text = "";
+                Char2speech.text = "";
                 // Turn off the "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
                 ChoiceTxt1.text = "Hi!";
-                ChoiceTxt2.text = "Skip (Must beat game first or pay £50)";
+                ChoiceTxt2.text = "Skip (Must beat game first or pay ₫360000)";
                 ChoiceTxt3.text = "Screw you";
                 Choicea.SetActive(true); // function ChoiceaFunct()
                 Choiceb.SetActive(true); // function ChoicebFunct()
@@ -83,51 +83,54 @@ public void Next(){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
-                Char1speech.text = "Hi!";
+                Char1speech.text = "You aren't bourgeoisie enough for that yet";
                 Char2name.text = "";
                 Char2speech.text = "";
-                primeInt = 6;
+                primeInt = 5;
         }
 
         else if (primeInt == 4){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
-                Char1speech.text = "Skip";
+                Char1speech.text = "You get an introduction anyways";
                 Char2name.text = "";
                 Char2speech.text = "";
-                primeInt = 6;
-        }
-
-        else if (primeInt == 5){
-                ArtChar1a.SetActive(true);
-                DialogueDisplay.SetActive(true);
-                Char1name.text = $"{name}";
-                Char1speech.text = "Leave me alone";
-                Char2name.text = "";
-                Char2speech.text = "";
-                primeInt = 6;
+                primeInt = 5;
         }
 
        // after choice 1a
-       else if (primeInt == 6){
+       else if (primeInt == 5){
                 //gameHandler.AddPlayerStat(1);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "(Name))";
+                Char2name.text = "(Name)";
                 Char2speech.text = "This is the magical land of Tosto where you can find any type of groceries you need.";
                 nextButton.SetActive(false);
                 allowSpace = false;
+                ChoiceTxt1.text = "Shut the hell up";
+                ChoiceTxt2.text = "Please leave me alone";
+                ChoiceTxt3.text = "Wow";
+                Choicea.SetActive(true); // function ChoiceaFunct()
+                Choiceb.SetActive(true); // function ChoicebFunct()
+                Choicec.SetActive(true);
         }
 
-       // after choice 1b
-       else if (primeInt == 30){
+        else if (primeInt == 6){
+                //gameHandler.AddPlayerStat(1);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "HDDD";
-                Char2speech.text = "No can do, stock sold out";
+                Char2name.text = "(Name)";
+                Char2speech.text = "You will encounter many magical creatures and humans in each section and even find secrets. Get ready for the time of your life.";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                ChoiceTxt1.text = "Interesting";
+                ChoiceTxt2.text = "I'm leaving";
+                ChoiceTxt3.text = "Here we go";
+                Choicea.SetActive(true); // function ChoiceaFunct()
+                Choiceb.SetActive(true); // function ChoicebFunct()
+                Choicec.SetActive(true);
         }
-
       //Please do NOT delete this final bracket that ends the Next() function:
      }
 
@@ -138,7 +141,30 @@ public void Next(){
                         Char1speech.text = "Hi!";
                         Char2name.text = "";
                         Char2speech.text = "";
-                        primeInt = 3;
+                        primeInt = 5;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 5) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Shut the hell up";
+                        Char2name.text = "";
+                        Char2speech.text = "";
+                        primeInt = 6;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 6) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Interesting";
+                        Char2name.text = "";
+                        Char2speech.text = "";
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
                         Choicec.SetActive(false);
@@ -149,25 +175,72 @@ public void Next(){
         public void ChoicebFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Leave me alone - screw you";
+                        Char1speech.text = "Skip";
                         Char2name.text = "";
                         Char2speech.text = "";
-                        primeInt = 4;
+                        primeInt = 3;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
                         Choicec.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;    
                 }
+                else if (primeInt == 5) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Please leave me alone";
+                        Char2name.text = "";
+                        Char2speech.text = "";
+                        primeInt = 6;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 5) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "I'm leaving";
+                        Char2name.text = "";
+                        Char2speech.text = "";
+                        primeInt = 6;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
                 
         }
         public void ChoicecFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Skip(Must beat game first or pay £50)";
+                        Char1speech.text = "Screw You";
                         Char2name.text = "";
                         Char2speech.text = "";
-                        primeInt = 29;
+                        primeInt = 3;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 5) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Wow";
+                        Char2name.text = "";
+                        Char2speech.text = "";
+                        primeInt = 6;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 6) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Here we go";
+                        Char2name.text = "";
+                        Char2speech.text = "";
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
                         Choicec.SetActive(false);
