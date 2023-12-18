@@ -20,6 +20,7 @@ public class Scene_1_Dialogue : MonoBehaviour {
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
+        public GameObject ArtBG2;
         public GameObject Choicea;
         public Text ChoiceTxt1;
         public GameObject Choiceb;
@@ -37,6 +38,7 @@ void Start(){
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtBG1.SetActive(true);
+        ArtBG2.SetActive(false);
         Choicea.SetActive(false);
         Choiceb.SetActive(false);
         Choicec.SetActive(false);
@@ -118,6 +120,8 @@ public void Next(){
 
         else if (primeInt == 6){
                 //gameHandler.AddPlayerStat(1);
+                ArtBG1.SetActive(false);
+                ArtBG2.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "(Name)";
