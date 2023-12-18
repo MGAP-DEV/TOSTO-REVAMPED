@@ -65,7 +65,7 @@ public void Next(){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
-                Char1speech.text = $"Hi, welcome to Tosto, {name}";
+                Char1speech.text = $"Hi, welcome to Tosto, I'm {name}";
                 Char2name.text = "";
                 Char2speech.text = "";
                 // Turn off the "Next" button, turn on "Choice" buttons
@@ -86,7 +86,7 @@ public void Next(){
                 Char1speech.text = "You aren't bourgeoisie enough for that yet";
                 Char2name.text = "";
                 Char2speech.text = "";
-                primeInt = 5;
+                primeInt++;
         }
 
         else if (primeInt == 4){
@@ -170,6 +170,7 @@ public void Next(){
                         Choicec.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;
+                        SceneManager.LoadScene("SceneEntrance");
                 }
         }
         public void ChoicebFunct(){
@@ -246,6 +247,7 @@ public void Next(){
                         Choicec.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;
+                        SceneManager.LoadScene("SceneEntrance");
                 }
         }
 
