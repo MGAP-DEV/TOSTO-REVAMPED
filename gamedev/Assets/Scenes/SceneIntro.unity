@@ -719,7 +719,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1134978109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7bbe957fd5f5124ba6637bdcfdc237d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5815d7d739877fe4696235f07a917aef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   primeInt: 1
@@ -1596,7 +1596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4331304205555279442, guid: dc8359a10bd4fc2479263c59f5ef072e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4331304205555279442, guid: dc8359a10bd4fc2479263c59f5ef072e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
