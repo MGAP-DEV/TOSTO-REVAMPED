@@ -610,7 +610,6 @@ GameObject:
   - component: {fileID: 1134978113}
   - component: {fileID: 1134978112}
   - component: {fileID: 1134978111}
-  - component: {fileID: 1134978114}
   - component: {fileID: 1134978115}
   m_Layer: 5
   m_Name: Canvas
@@ -711,36 +710,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1134978114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134978109}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7bbe957fd5f5124ba6637bdcfdc237d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primeInt: 1
-  Char1name: {fileID: 0}
-  Char1speech: {fileID: 0}
-  Char2name: {fileID: 0}
-  Char2speech: {fileID: 0}
-  DialogueDisplay: {fileID: 0}
-  ArtChar1a: {fileID: 0}
-  ArtBG1: {fileID: 0}
-  ArtBG2: {fileID: 0}
-  Choicea: {fileID: 0}
-  ChoiceTxt1: {fileID: 0}
-  Choiceb: {fileID: 0}
-  ChoiceTxt2: {fileID: 0}
-  Choicec: {fileID: 0}
-  ChoiceTxt3: {fileID: 0}
-  NextScene1Button: {fileID: 0}
-  NextScene2Button: {fileID: 0}
-  nextButton: {fileID: 0}
 --- !u!114 &1134978115
 MonoBehaviour:
   m_ObjectHideFlags: 0
