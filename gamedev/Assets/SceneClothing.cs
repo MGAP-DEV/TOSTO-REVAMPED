@@ -27,8 +27,8 @@ public class Scene_Clothing_Dialogue : MonoBehaviour {
         public Text ChoiceTxt2;
         public GameObject Choicec;
         public Text ChoiceTxt3;
-        public GameObject NextScene1Button;
-        public GameObject NextScene2Button;
+        public GameObject Choiced;
+        public Text ChoiceTxt4;
         public GameObject nextButton;
        //public AudioSource audioSource1;
         private bool allowSpace = true;
@@ -42,8 +42,7 @@ void Start(){
         Choicea.SetActive(false);
         Choiceb.SetActive(false);
         Choicec.SetActive(false);
-        NextScene1Button.SetActive(false);
-        NextScene2Button.SetActive(false);
+        Choiced.SetActive(false);
         nextButton.SetActive(true);
         name = "Bob";
    }
@@ -76,9 +75,11 @@ public void Next(){
                 ChoiceTxt1.text = "Hi!";
                 ChoiceTxt2.text = "Skip (Must beat game first or pay ₫360000)";
                 ChoiceTxt3.text = "Screw you";
+                ChoiceTxt4.text = "Screw you";
                 Choicea.SetActive(true); // function ChoiceaFunct()
                 Choiceb.SetActive(true); // function ChoicebFunct()
                 Choicec.SetActive(true);
+                Choiced.SetActive(true);
         }
 
         else if (primeInt == 3){
@@ -255,10 +256,42 @@ public void Next(){
                 }
         }
 
-        public void SceneChange5(){
-               SceneManager.LoadScene("Scene2a");
-        }
-        public void SceneChange6(){
-                SceneManager.LoadScene("Scene2b");
+        public void Choiced2Funct(){
+                if (primeInt == 2) {
+                        Char1name.text = "rahhh";
+                        Char1speech.text = "uahguhguhaghauhga!";
+                        Char2name.text = "deez";
+                        Char2speech.text = "as the strongest curse jogoat fought the fraud the king of curses";
+                        primeInt = 5;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 5) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Shut the hell up";
+                        Char2name.text = "";
+                        Char2speech.text = "";
+                        primeInt = 6;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 6) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Interesting";
+                        Char2name.text = "";
+                        Char2speech.text = "";
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        SceneManager.LoadScene("SceneEntrance");
+                }
         }
 }
