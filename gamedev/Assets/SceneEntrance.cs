@@ -26,8 +26,6 @@ public class Entrance_Dialogue : MonoBehaviour {
         public Text ChoiceTxt2;
         public GameObject Choicec1;
         public Text ChoiceTxt3;
-        public GameObject NextScene1Button;
-        public GameObject NextScene2Button;
         public GameObject nextButton;
        //public AudioSource audioSource1;
         private bool allowSpace = true;
@@ -40,8 +38,6 @@ void Start(){
         Choicea1.SetActive(false);
         Choiceb1.SetActive(false);
         Choicec1.SetActive(false);
-        NextScene1Button.SetActive(false);
-        NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
         name = "Bob";
    }
@@ -143,12 +139,5 @@ public void Next(){
                         nextButton.SetActive(true);
                         allowSpace = true;
                 }
-        }
-
-        public void SceneChange4(){
-               SceneManager.LoadScene("Scene2a");
-        }
-        public void SceneChange3(){
-                SceneManager.LoadScene("Scene2b");
         }
 }

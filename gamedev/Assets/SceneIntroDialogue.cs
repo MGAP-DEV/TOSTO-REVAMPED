@@ -8,17 +8,11 @@ using UnityEngine.Audio;
 public class Scene_Intro_Dialogue : MonoBehaviour {
         // These are the script variables.
         // For more character images or buttons, duplicate the ArtChar ones listed here and renumber.
-        public int primeInt = 1;         // This integer drives game progress!
+        public int primeInt = 1;
         public Text Char1name;
         public Text Char1speech;
-        public Text Char2name;
-        public Text Char2speech;
-       //public Text Char3name;
-       //public Text Char3speech;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1a;
-       //public GameObject ArtChar1b;
-       //public GameObject ArtChar2;
         public GameObject ArtBG1;
         public GameObject ArtBG2;
         public GameObject Choicea;
@@ -28,7 +22,7 @@ public class Scene_Intro_Dialogue : MonoBehaviour {
         public GameObject Choicec;
         public Text ChoiceTxt3;
         public GameObject nextButton;
-       //public AudioSource audioSource1;
+        public AudioSource audioSource1;
         private bool allowSpace = true;
 
 // Initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -56,7 +50,7 @@ void Update(){
 //Story Units! The main story function. Players hit [NEXT] to progress to the next primeInt:
 public void Next(){
         if (primeInt == 1){
-                // audioSource1.Play();
+                audioSource1.Play();
                 primeInt++;
         }
         else if (primeInt == 2){
@@ -64,8 +58,6 @@ public void Next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
                 Char1speech.text = $"Hi, welcome to Tosto, I'm {name}";
-                Char2name.text = "";
-                Char2speech.text = "";
                 // Turn off the "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -82,8 +74,6 @@ public void Next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
                 Char1speech.text = "You aren't bourgeoisie enough for that yet";
-                Char2name.text = "";
-                Char2speech.text = "";
                 primeInt++;
         }
 
@@ -92,18 +82,14 @@ public void Next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
                 Char1speech.text = "You get an introduction anyways";
-                Char2name.text = "";
-                Char2speech.text = "";
                 primeInt = 5;
         }
 
        // after choice 1a
        else if (primeInt == 5){
                 //gameHandler.AddPlayerStat(1);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "(Name)";
-                Char2speech.text = "This is the magical land of Tosto where you can find any type of groceries you need.";
+                Char1name.text = "(Name)";
+                Char1speech.text = "This is the magical land of Tosto where you can find any type of groceries you need.";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 ChoiceTxt1.text = "Shut the hell up";
@@ -118,10 +104,8 @@ public void Next(){
                 //gameHandler.AddPlayerStat(1);
                 ArtBG1.SetActive(false);
                 ArtBG2.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "(Name)";
-                Char2speech.text = "You will encounter many magical creatures and humans in each section and even find secrets. Get ready for the time of your life.";
+                Char1name.text = "(Name)";
+                Char1speech.text = "You will encounter many magical creatures and humans in each section and even find secrets. Get ready for the time of your life.";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 ChoiceTxt1.text = "Interesting";
@@ -139,8 +123,6 @@ public void Next(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Hi!";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 5;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -151,8 +133,6 @@ public void Next(){
                 else if (primeInt == 5) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Shut the hell up";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 6;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -163,8 +143,6 @@ public void Next(){
                 else if (primeInt == 6) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Interesting";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
                         Choicec.SetActive(false);
@@ -177,8 +155,6 @@ public void Next(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Skip";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 3;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -189,8 +165,6 @@ public void Next(){
                 else if (primeInt == 5) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Please leave me alone";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 6;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -201,8 +175,6 @@ public void Next(){
                 else if (primeInt == 5) {
                         Char1name.text = "YOU";
                         Char1speech.text = "I'm leaving";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 6;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -216,8 +188,6 @@ public void Next(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Screw You";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 3;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -228,8 +198,6 @@ public void Next(){
                 else if (primeInt == 5) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Wow";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 6;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -240,8 +208,6 @@ public void Next(){
                 else if (primeInt == 6) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Here we go";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
                         Choicec.SetActive(false);

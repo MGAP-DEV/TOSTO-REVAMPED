@@ -398,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3327834262963617282, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Name
-      value: ButtonScene1b
+      value: ButtonChoice1b
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -947,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3327834262963617282, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Name
-      value: ButtonScene1c
+      value: ButtonChoice1c
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1105,7 +1105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3327834262963617282, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Name
-      value: ButtonScene1a
+      value: ButtonChoice1a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1242,7 +1242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3327834262963617282, guid: 711601427c9305b4c9896dbbe5ffa4be, type: 3}
       propertyPath: m_Name
-      value: ButtonScene1d
+      value: ButtonChoice1d
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
