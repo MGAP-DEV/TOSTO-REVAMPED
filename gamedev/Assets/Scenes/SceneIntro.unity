@@ -1138,7 +1138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4294495403818962903, guid: 0dc81e932b1948c42893cb874bd866c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene_1_Dialogue, Assembly-CSharp
+      value: Scene_Intro, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4294495403818962903, guid: 0dc81e932b1948c42893cb874bd866c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

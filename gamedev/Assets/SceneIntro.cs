@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene_Intro_Dialogue : MonoBehaviour {
+public class Scene_Intro : MonoBehaviour {
         // These are the script variables.
         // For more character images or buttons, duplicate the ArtChar ones listed here and renumber.
         public int primeInt = 1;
