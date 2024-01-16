@@ -8,13 +8,9 @@ using UnityEngine.Audio;
 public class Entrance_Dialogue : MonoBehaviour {
         // These are the script variables.
         // For more character images or buttons, duplicate the ArtChar ones listed here and renumber.
-        public int primeInt = 1;         // This integer drives game progress!
+        public int primeInt = 1;
         public Text Char1name;
         public Text Char1speech;
-        public Text Char2name;
-        public Text Char2speech;
-       //public Text Char3name;
-       //public Text Char3speech;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1a;
        //public GameObject ArtChar1b;
@@ -62,8 +58,6 @@ public void Next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "HDDD";
                 Char1speech.text = $"I’ve been around these parts for a long time, want me to show you the ropes?";
-                Char2name.text = "";
-                Char2speech.text = "";
                 // Turn off the "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -80,8 +74,6 @@ public void Next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "HDDD";
                 Char1speech.text = "No can do, stock sold out";
-                Char2name.text = "";
-                Char2speech.text = "";
         }
 
         else if (primeInt == 4){
@@ -89,8 +81,6 @@ public void Next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "HDDD";
                 Char1speech.text = "Laugh it up chuckles, there are a lot worse out there";
-                Char2name.text = "";
-                Char2speech.text = "";
                 primeInt = 5;
         }
       //Please do NOT delete this final bracket that ends the Next() function:
@@ -101,8 +91,6 @@ public void Next(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Got something else for me?";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 4;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
@@ -115,8 +103,6 @@ public void Next(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Why? Are there more creepy guys like you?";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 4;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
@@ -130,8 +116,6 @@ public void Next(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Got something else for me?";
-                        Char2name.text = "";
-                        Char2speech.text = "";
                         primeInt = 3;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
