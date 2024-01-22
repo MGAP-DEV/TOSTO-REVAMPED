@@ -57,12 +57,12 @@ public void Next(){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "HDDD";
-                Char1speech.text = $"I’ve been around these parts for a long time, want me to show you the ropes?";
+                Char1speech.text = "I’ve been around these parts for a long time, want me to show you the ropes?";
                 // Turn off the "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                ChoiceTxt1.text = "Yes, my grubby legs can’t stand wandering around";
-                ChoiceTxt2.text = "Why? Are there more creepy guys like you?";
+                ChoiceTxt1.text = "Yes, I have never been to such a place before";
+                ChoiceTxt2.text = "You think I need help (I do)";
                 ChoiceTxt3.text = "Got something else for me?";
                 Choicea1.SetActive(true); // function Choicea1Funct()
                 Choiceb1.SetActive(true); // function Choiceb1Funct()
@@ -74,24 +74,69 @@ public void Next(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "HDDD";
                 Char1speech.text = "No can do, stock sold out";
+                primeInt = 5;
         }
 
         else if (primeInt == 4){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "HDDD";
-                Char1speech.text = "Laugh it up chuckles, there are a lot worse out there";
+                Char1speech.text = "Laugh it up chuckles, I've got your back.";
                 primeInt = 5;
         }
-      //Please do NOT delete this final bracket that ends the Next() function:
+        else if (primeInt == 5){
+                Char1name.text = "HDDD";
+                Char1speech.text = "Ask me anything, I’m very big brain, let me help you out...";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                ChoiceTxt1.text = "Charming";
+                ChoiceTxt2.text = "Fighting";
+                ChoiceTxt3.text = "Other Options";
+                Choicea1.SetActive(true);
+                Choiceb1.SetActive(true);
+                Choicec1.SetActive(true);
+        }
+        else if (primeInt == 6){
+                Char1name.text = "HDDD";
+                Char1speech.text = "Ask me anything, I’m very big brain, let me help you out...";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                ChoiceTxt1.text = "Point of the Game";
+                ChoiceTxt2.text = "How to move (aka how does the game work)";
+                ChoiceTxt3.text = "I'm ready to get out of here";
+                Choicea1.SetActive(true);
+                Choiceb1.SetActive(true);
+                Choicec1.SetActive(true);
+        }
+        else if (primeInt == 7){
+                Char1name.text = "HDDD";
+                Char1speech.text = "Are you sure?";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                ChoiceTxt1.text = "Yes";
+                ChoiceTxt3.text = "No";
+                Choicea1.SetActive(true);
+                Choiceb1.SetActive(false);
+                Choicec1.SetActive(true);
+        }
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
         public void Choicea1Funct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Got something else for me?";
+                        Char1speech.text = "Yes, I have never been to such a place before";
                         primeInt = 4;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 7) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Yes";
+                        primeInt = 8;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
@@ -102,7 +147,7 @@ public void Next(){
         public void Choiceb1Funct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Why? Are there more creepy guys like you?";
+                        Char1speech.text = "You think I need help?";
                         primeInt = 4;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
@@ -117,6 +162,33 @@ public void Next(){
                         Char1name.text = "YOU";
                         Char1speech.text = "Got something else for me?";
                         primeInt = 3;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 5) {
+                        primeInt = 6;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        Next();
+                }
+                else if (primeInt == 6) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Got something else for me?";
+                        primeInt = 7;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 7) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Go Back";
+                        primeInt = 5;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
