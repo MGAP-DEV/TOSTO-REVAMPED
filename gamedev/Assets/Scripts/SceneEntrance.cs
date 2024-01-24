@@ -70,16 +70,12 @@ public void Next(){
         }
 
         else if (primeInt == 3){
-                ArtChar1a.SetActive(true);
-                DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
                 Char1speech.text = "No can do, stock sold out";
                 primeInt = 5;
         }
 
         else if (primeInt == 4){
-                ArtChar1a.SetActive(true);
-                DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
                 Char1speech.text = "Laugh it up chuckles, I've got your back.";
                 primeInt = 5;
@@ -92,7 +88,6 @@ public void Next(){
                 ChoiceTxt1.text = "Point of the Game";
                 ChoiceTxt2.text = "How to move (aka how does the game work)";
                 ChoiceTxt3.text = "Other options";
-
                 Choicea1.SetActive(true);
                 Choiceb1.SetActive(true);
                 Choicec1.SetActive(true);
@@ -132,15 +127,11 @@ public void Next(){
                 Choicec1.SetActive(true);
         }
         else if (primeInt == 9){
-                ArtChar1a.SetActive(true);
-                DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
                 Char1speech.text = "Good luck!";
                 primeInt++;
         }
         else if (primeInt == 10){
-                ArtChar1a.SetActive(true);
-                DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "*He Disappears*";
                 primeInt++;

@@ -98,14 +98,9 @@ public void Next(){
                 ArtBG2.SetActive(true);
                 Char1name.text = $"{name}";
                 Char1speech.text = "You will encounter many magical creatures and humans in each section and even find secrets. Get ready for the time of your life.";
-                nextButton.SetActive(false);
-                allowSpace = false;
                 ChoiceTxt1.text = "Interesting, let's explore";
                 ChoiceTxt2.text = "I'm leaving";
                 ChoiceTxt3.text = "Here we go (Enters store)";
-                Choicea.SetActive(true); // function ChoiceaFunct()
-                Choiceb.SetActive(true); // function ChoicebFunct()
-                Choicec.SetActive(true);
         }
      }
 
@@ -125,20 +120,10 @@ public void Next(){
                         Char1name.text = "YOU";
                         Char1speech.text = "Wow";
                         primeInt = 6;
-                        Choicea.SetActive(false);
-                        Choiceb.SetActive(false);
-                        Choicec.SetActive(false);
-                        nextButton.SetActive(true);
-                        allowSpace = true;
                 }
                 else if (primeInt == 6) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Interesting, let's explore";
-                        Choicea.SetActive(false);
-                        Choiceb.SetActive(false);
-                        Choicec.SetActive(false);
-                        nextButton.SetActive(true);
-                        allowSpace = true;
                         SceneManager.LoadScene("SceneEntrance");
                 }
         }
@@ -157,21 +142,11 @@ public void Next(){
                         Char1name.text = "YOU";
                         Char1speech.text = "That's so cool, it's almost as if I expect that from a food store";
                         primeInt = 6;
-                        Choicea.SetActive(false);
-                        Choiceb.SetActive(false);
-                        Choicec.SetActive(false);
-                        nextButton.SetActive(true);
-                        allowSpace = true;
                 }
-                else if (primeInt == 5) {
+                else if (primeInt == 6) {
                         Char1name.text = "YOU";
                         Char1speech.text = "I'm leaving";
-                        primeInt = 6;
-                        Choicea.SetActive(false);
-                        Choiceb.SetActive(false);
-                        Choicec.SetActive(false);
-                        nextButton.SetActive(true);
-                        allowSpace = true;
+                        //return to main menu
                 }
                 
         }
@@ -190,20 +165,10 @@ public void Next(){
                         Char1name.text = "YOU";
                         Char1speech.text = "Wow";
                         primeInt = 6;
-                        Choicea.SetActive(false);
-                        Choiceb.SetActive(false);
-                        Choicec.SetActive(false);
-                        nextButton.SetActive(true);
-                        allowSpace = true;
                 }
                 else if (primeInt == 6) {
                         Char1name.text = "YOU";
                         Char1speech.text = "Here we go";
-                        Choicea.SetActive(false);
-                        Choiceb.SetActive(false);
-                        Choicec.SetActive(false);
-                        nextButton.SetActive(true);
-                        allowSpace = true;
                         SceneManager.LoadScene("SceneEntrance");
                 }
         }
