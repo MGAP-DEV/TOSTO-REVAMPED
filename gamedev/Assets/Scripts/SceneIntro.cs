@@ -35,7 +35,7 @@ void Start(){
         Choiceb.SetActive(false);
         Choicec.SetActive(false);
         nextButton.SetActive(true);
-        name = "Bob";
+        name = "Ach Triple D";
    }
 
 // Use the spacebar as a faster "Next" button:
@@ -57,13 +57,13 @@ public void Next(){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = $"{name}";
-                Char1speech.text = $"Hi, welcome to Tosto, I'm {name}";
+                Char1speech.text = $"Hi, welcome to Tosto. I’m Ach Triple D (pronounced eh-che triple dee) but you call me Triple D";
                 // Turn off the "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
                 ChoiceTxt1.text = "Hi!";
                 ChoiceTxt2.text = "Skip (Must beat game first or pay ₫360000)";
-                ChoiceTxt3.text = "Screw you";
+                ChoiceTxt3.text = "Hello there random stranger";
                 Choicea.SetActive(true); // function ChoiceaFunct()
                 Choiceb.SetActive(true); // function ChoicebFunct()
                 Choicec.SetActive(true);
@@ -92,8 +92,8 @@ public void Next(){
                 Char1speech.text = "This is the magical land of Tosto where you can find any type of groceries you need.";
                 nextButton.SetActive(false);
                 allowSpace = false;
-                ChoiceTxt1.text = "Shut the hell up";
-                ChoiceTxt2.text = "Please leave me alone";
+                ChoiceTxt1.text = "Wow";
+                ChoiceTxt2.text = "That’s so cool, it’s almost as if I expect that from a food store";
                 ChoiceTxt3.text = "Wow";
                 Choicea.SetActive(true); // function ChoiceaFunct()
                 Choiceb.SetActive(true); // function ChoicebFunct()
@@ -108,9 +108,9 @@ public void Next(){
                 Char1speech.text = "You will encounter many magical creatures and humans in each section and even find secrets. Get ready for the time of your life.";
                 nextButton.SetActive(false);
                 allowSpace = false;
-                ChoiceTxt1.text = "Interesting";
+                ChoiceTxt1.text = "Interesting, let's explore";
                 ChoiceTxt2.text = "I'm leaving";
-                ChoiceTxt3.text = "Here we go";
+                ChoiceTxt3.text = "Here we go (Enters store)";
                 Choicea.SetActive(true); // function ChoiceaFunct()
                 Choiceb.SetActive(true); // function ChoicebFunct()
                 Choicec.SetActive(true);
@@ -132,7 +132,7 @@ public void Next(){
                 }
                 else if (primeInt == 5) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Shut the hell up";
+                        Char1speech.text = "Wow";
                         primeInt = 6;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -142,7 +142,7 @@ public void Next(){
                 }
                 else if (primeInt == 6) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Interesting";
+                        Char1speech.text = "Interesting, let's explore";
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
                         Choicec.SetActive(false);
@@ -164,7 +164,7 @@ public void Next(){
                 }
                 else if (primeInt == 5) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Please leave me alone";
+                        Char1speech.text = "That’s so cool, it’s almost as if I expect that from a food store";
                         primeInt = 6;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
@@ -187,7 +187,7 @@ public void Next(){
         public void ChoicecFunct(){
                 if (primeInt == 2) {
                         Char1name.text = "YOU";
-                        Char1speech.text = "Screw You";
+                        Char1speech.text = "Hello there random stranger";
                         primeInt = 3;
                         Choicea.SetActive(false);
                         Choiceb.SetActive(false);
