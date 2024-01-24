@@ -88,7 +88,7 @@ public void Next(){
        // after choice 1a
        else if (primeInt == 5){
                 //gameHandler.AddPlayerStat(1);
-                Char1name.text = "(Name)";
+                Char1name.text = $"{name}";
                 Char1speech.text = "This is the magical land of Tosto where you can find any type of groceries you need.";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -104,7 +104,7 @@ public void Next(){
                 //gameHandler.AddPlayerStat(1);
                 ArtBG1.SetActive(false);
                 ArtBG2.SetActive(true);
-                Char1name.text = "(Name)";
+                Char1name.text = $"{name}";
                 Char1speech.text = "You will encounter many magical creatures and humans in each section and even find secrets. Get ready for the time of your life.";
                 nextButton.SetActive(false);
                 allowSpace = false;

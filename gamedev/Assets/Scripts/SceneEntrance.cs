@@ -35,7 +35,7 @@ void Start(){
         Choiceb1.SetActive(false);
         Choicec1.SetActive(false);
         nextButton.SetActive(true);
-        name = "Bob";
+        name = "Ach Triple D";
    }
 
 // Use the spacebar as a faster "Next" button:
@@ -56,7 +56,7 @@ public void Next(){
         else if (primeInt == 2){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "HDDD";
+                Char1name.text = $"{name}";
                 Char1speech.text = "I’ve been around these parts for a long time, want me to show you the ropes?";
                 // Turn off the "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
@@ -72,7 +72,7 @@ public void Next(){
         else if (primeInt == 3){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "HDDD";
+                Char1name.text = $"{name}";
                 Char1speech.text = "No can do, stock sold out";
                 primeInt = 5;
         }
@@ -80,12 +80,12 @@ public void Next(){
         else if (primeInt == 4){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "HDDD";
+                Char1name.text = $"{name}";
                 Char1speech.text = "Laugh it up chuckles, I've got your back.";
                 primeInt = 5;
         }
         else if (primeInt == 5){
-                Char1name.text = "HDDD";
+                Char1name.text = $"{name}";
                 Char1speech.text = "Ask me anything, I’m very big brain, let me help you out...";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -97,24 +97,24 @@ public void Next(){
                 Choicec1.SetActive(true);
         }
         else if (primeInt == 6){
-                Char1name.text = "HDDD";
+                Char1name.text = $"{name}";
                 Char1speech.text = "Ask me anything, I’m very big brain, let me help you out...";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 ChoiceTxt1.text = "Point of the Game";
                 ChoiceTxt2.text = "How to move (aka how does the game work)";
-                ChoiceTxt3.text = "I'm ready to get out of here";
+                ChoiceTxt3.text = "Even more options";
                 Choicea1.SetActive(true);
                 Choiceb1.SetActive(true);
                 Choicec1.SetActive(true);
         }
         else if (primeInt == 7){
-                Char1name.text = "HDDD";
-                Char1speech.text = "Are you sure?";
+                Char1name.text = $"{name}";
+                Char1speech.text = "Ask me anything, I’m very big brain, let me help you out...";
                 nextButton.SetActive(false);
                 allowSpace = false;
-                ChoiceTxt1.text = "Yes";
-                ChoiceTxt3.text = "No";
+                ChoiceTxt1.text = "I'm ready to get out of here";
+                ChoiceTxt3.text = "First options";
                 Choicea1.SetActive(true);
                 Choiceb1.SetActive(false);
                 Choicec1.SetActive(true);
@@ -176,24 +176,18 @@ public void Next(){
                         Next();
                 }
                 else if (primeInt == 6) {
-                        Char1name.text = "YOU";
-                        Char1speech.text = "Got something else for me?";
                         primeInt = 7;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
-                        nextButton.SetActive(true);
-                        allowSpace = true;
+                        Next();
                 }
                 else if (primeInt == 7) {
-                        Char1name.text = "YOU";
-                        Char1speech.text = "Go Back";
                         primeInt = 5;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
-                        nextButton.SetActive(true);
-                        allowSpace = true;
+                        Next();
                 }
         }
 }
