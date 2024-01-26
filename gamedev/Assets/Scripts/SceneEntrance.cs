@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class Entrance : MonoBehaviour {
-        // These are the script variables.
-        // For more character images or buttons, duplicate the ArtChar ones listed here and renumber.
         public int primeInt = 1;
         public Text Char1name;
         public Text Char1speech;
