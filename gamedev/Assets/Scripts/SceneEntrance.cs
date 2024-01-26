@@ -22,6 +22,14 @@ public class Entrance : MonoBehaviour {
         public Text ChoiceTxt2;
         public GameObject Choicec1;
         public Text ChoiceTxt3;
+        public GameObject Choicea2;
+        public Text ChoiceTxt01;
+        public GameObject Choiceb2;
+        public Text ChoiceTxt02;
+        public GameObject Choicec2;
+        public Text ChoiceTxt03;
+        public GameObject Choiced2;
+        public Text ChoiceTxt04;
         public GameObject nextButton;
        //public AudioSource audioSource1;
         private bool allowSpace = true;
@@ -34,6 +42,10 @@ void Start(){
         Choicea1.SetActive(false);
         Choiceb1.SetActive(false);
         Choicec1.SetActive(false);
+        Choicea2.SetActive(false);
+        Choiceb2.SetActive(false);
+        Choicec2.SetActive(false);
+        Choiced2.SetActive(false);
         nextButton.SetActive(true);
         name = "Ach Triple D";
    }
@@ -81,6 +93,7 @@ public void Next(){
                 primeInt = 5;
         }
         else if (primeInt == 5){
+                //bbs
                 Char1name.text = $"{name}";
                 Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
                 nextButton.SetActive(false);
@@ -93,7 +106,6 @@ public void Next(){
                 Choicec1.SetActive(true);
         }
         else if (primeInt == 6){
-                //bbs
                 Char1name.text = $"{name}";
                 Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
                 nextButton.SetActive(false);
@@ -112,8 +124,7 @@ public void Next(){
                 allowSpace = false;
                 ChoiceTxt1.text = "I'm ready to get out of here";
                 ChoiceTxt3.text = "First options";
-                Choicea1.SetActive(true);
-                Choicec1.SetActive(true);
+                Choiceb1.SetActive(false);
         }
         else if (primeInt == 8){
                 Char1name.text = $"{name}";
@@ -123,8 +134,6 @@ public void Next(){
                 ChoiceTxt1.text = "This place is pretty weird";
                 ChoiceTxt2.text = "WAIT WAIT WAIT, I want to ask more questions please, I didn't mean to leave so soon :(";
                 ChoiceTxt3.text = "Thanks for all the help, I will get all the groceries I came for";
-                Choicea1.SetActive(true);
-                Choicec1.SetActive(true);
         }
         else if (primeInt == 9){
                 Char1name.text = $"{name}";
@@ -144,6 +153,69 @@ public void Next(){
                 ChoiceTxt2.text = "Storage (North)";
                 Choiceb1.SetActive(true);
         }
+        else if (primeInt == 20) {
+                //point of the game
+                Char1name.text = $"{name}";
+                Char1speech.text = "What a silly question! You're obviously here to buy groceries";
+                primeInt++;
+        }
+        else if (primeInt == 21) {
+                Char1name.text = $"{name}";
+                Char1speech.text = "Any better questions?";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                ChoiceTxt01.text = "How do I do that?";
+                ChoiceTxt02.text = "What kind of groceries do they have here?";
+                ChoiceTxt03.text = "Can I leave without any groceries?";
+                ChoiceTxt04.text = "What if I don't want groceries…";
+                Choicea2.SetActive(true);
+                Choiceb2.SetActive(true);
+                Choicec2.SetActive(true);
+                Choiced2.SetActive(true);
+        }
+        else if (primeInt == 22) {
+                Char1name.text = $"{name}";
+                Char1speech.text = "Well there are two simple ways to get your groceries, you can fight them, or charm them, ask me about it later.";
+                primeInt = 21;
+        }
+        else if (primeInt == 23) {
+                Char1name.text = $"{name}";
+                Char1speech.text = "So many that I can't name them all";
+                primeInt = 21;
+        }
+        else if (primeInt == 24) {
+                Char1name.text = $"{name}";
+                Char1speech.text = "Then you don't leave Tosto";
+                primeInt = 21;
+        }
+        else if (primeInt == 25) {
+                Char1name.text = $"{name}";
+                Char1speech.text = "No, you need groceries in order to leave. The more groceries you have from your list the better a chance you have to leave this forsaken place";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                ChoiceTxt2.text = "List? What list? What's on my list?";
+                Choiceb1.SetActive(true);
+        }
+        else if (primeInt == 26) {
+                Char1name.text = $"{name}";
+                Char1speech.text = "Boy I'm glad you asked. You have a total of 6 different items, but it's your list";
+                primeInt++;
+        }
+        else if (primeInt == 27) {
+                Char1name.text = $"{name}";
+                Char1speech.text = "I have no idea what those items were, I'm sure a walk through the store may help you find them. They’re hard to miss...";
+                primeInt++;
+        }
+        else if (primeInt == 30){
+                //how the game works
+                Char1name.text = $"{name}";
+                Char1speech.text = "This game is a visual novel";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                ChoiceTxt1.text = "That's it?";
+                ChoiceTxt3.text = "What's a visual novel?";
+                Choiceb1.SetActive(false);
+        }
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
@@ -152,6 +224,16 @@ public void Next(){
                         Char1name.text = "YOU";
                         Char1speech.text = "Yes, I have never been to such a place before";
                         primeInt = 4;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 5) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Why am I here?";
+                        primeInt = 20;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
@@ -178,6 +260,17 @@ public void Next(){
                         nextButton.SetActive(true);
                         allowSpace = true;
                 }
+                else if (primeInt == 21) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "How do I do that?";
+                        primeInt = 22;
+                        Choicea2.SetActive(false);
+                        Choiceb2.SetActive(false);
+                        Choicec2.SetActive(false);
+                        Choiced2.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
         }
         public void Choiceb1Funct(){
                 if (primeInt == 2) {
@@ -190,10 +283,14 @@ public void Next(){
                         nextButton.SetActive(true);
                         allowSpace = true;
                 }
+                else if (primeInt == 5) {
+                        primeInt = 30;
+                        Next();
+                }
                 else if (primeInt == 8) {
                         Char1name.text = "YOU";
                         Char1speech.text = "WAIT WAIT WAIT, I want to ask more questions please, I didn't mean to leave so soon :(";
-                        primeInt = 6;
+                        primeInt = 5;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
@@ -203,7 +300,25 @@ public void Next(){
                 else if (primeInt == 11) {
                         SceneManager.LoadScene("SceneStorage");
                 }
-                
+                else if (primeInt == 21) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "What kind of groceries do they have here?";
+                        primeInt = 23;
+                        Choicea2.SetActive(false);
+                        Choiceb2.SetActive(false);
+                        Choicec2.SetActive(false);
+                        Choiced2.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 25) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "List? What list? What's on my list?";
+                        primeInt++;
+                        Choiceb1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
         }
         public void Choicec1Funct(){
                 if (primeInt == 2) {
@@ -218,23 +333,14 @@ public void Next(){
                 }
                 else if (primeInt == 5) {
                         primeInt = 6;
-                        Choicea1.SetActive(false);
-                        Choiceb1.SetActive(false);
-                        Choicec1.SetActive(false);
                         Next();
                 }
                 else if (primeInt == 6) {
                         primeInt = 7;
-                        Choicea1.SetActive(false);
-                        Choiceb1.SetActive(false);
-                        Choicec1.SetActive(false);
                         Next();
                 }
                 else if (primeInt == 7) {
                         primeInt = 5;
-                        Choicea1.SetActive(false);
-                        Choiceb1.SetActive(false);
-                        Choicec1.SetActive(false);
                         Next();
                 }
                 else if (primeInt == 8) {
@@ -244,6 +350,31 @@ public void Next(){
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 21) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Can I leave without any groceries?";
+                        primeInt = 25;
+                        Choicea2.SetActive(false);
+                        Choiceb2.SetActive(false);
+                        Choicec2.SetActive(false);
+                        Choiced2.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+
+        }
+        public void Choiced1Funct(){
+                if (primeInt == 21) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "What if I don't want groceries…";
+                        primeInt = 24;
+                        Choicea2.SetActive(false);
+                        Choiceb2.SetActive(false);
+                        Choicec2.SetActive(false);
+                        Choiced2.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;
                 }
