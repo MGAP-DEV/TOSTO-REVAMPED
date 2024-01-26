@@ -214,6 +214,20 @@ public void Next(){
                 ChoiceTxt3.text = "What's a visual novel?";
                 Choiceb1.SetActive(false);
         }
+        else if (primeInt == 31){
+                Char1name.text = $"{name}";
+                Char1speech.text = "Well yeah, a visual novel has no wasd movement. What did you expect?";
+                primeInt = 33;
+        }
+        else if (primeInt == 32){
+                Char1name.text = $"{name}";
+                Char1speech.text = "You don't know what a visual novel is? Are you actually stupid?";
+                primeInt = 33;
+        }
+        else if (primeInt == 33){
+                Char1name.text = $"{name}";
+                Char1speech.text = "Anyways, click any of those options when they appear and you'll be fine.";
+        }
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
@@ -266,6 +280,16 @@ public void Next(){
                         Choiceb2.SetActive(false);
                         Choicec2.SetActive(false);
                         Choiced2.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
+                else if (primeInt == 30) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "That's it?";
+                        primeInt = 31;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;
                 }
@@ -362,7 +386,16 @@ public void Next(){
                         nextButton.SetActive(true);
                         allowSpace = true;
                 }
-
+                else if (primeInt == 30) {
+                        Char1name.text = "YOU";
+                        Char1speech.text = "What's a visual novel?";
+                        primeInt = 32;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                }
         }
         public void Choiced1Funct(){
                 if (primeInt == 21) {
