@@ -44,7 +44,6 @@ void Update(){
         }
    }
 
-//Story Units! The main story function. Players hit [NEXT] to progress to the next primeInt:
 public void Next(){
         switch (primeInt) {
                 case 1:
@@ -102,93 +101,93 @@ public void Next(){
                         Choicec.SetActive(true);
                         break;
         }
-     }
+}
 
-        public void ChoiceaFunct(){
-                switch (primeInt) {
-                        case 2:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "Hi!";
-                                primeInt = 5;
-                                Choicea.SetActive(false);
-                                Choiceb.SetActive(false);
-                                Choicec.SetActive(false);
-                                nextButton.SetActive(true);
-                                allowSpace = true;
-                                break;
-                        case 5:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "Wow";
-                                primeInt = 6;
-                                Choicea.SetActive(false);
-                                Choiceb.SetActive(false);
-                                Choicec.SetActive(false);
-                                nextButton.SetActive(true);
-                                allowSpace = true;
-                                break;
-                        case 6:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "Interesting, let's explore";
-                                SceneManager.LoadScene("SceneEntrance");
-                                break;
-                }
+public void ChoiceaFunct(){
+        switch (primeInt) {
+                case 2:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Hi!";
+                        primeInt = 5;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 5:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Wow";
+                        primeInt = 6;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 6:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Interesting, let's explore";
+                        SceneManager.LoadScene("SceneEntrance");
+                        break;
         }
-        public void ChoicebFunct(){
-                switch (primeInt) {
-                        case 2:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "Skip";
-                                primeInt = 3;
-                                Choicea.SetActive(false);
-                                Choiceb.SetActive(false);
-                                Choicec.SetActive(false);
-                                nextButton.SetActive(true);
-                                allowSpace = true;
-                                break;
-                        case 5:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "That's so cool, it's almost as if I expect that from a food store";
-                                Choicea.SetActive(false);
-                                Choiceb.SetActive(false);
-                                Choicec.SetActive(false);
-                                primeInt = 6;
-                                nextButton.SetActive(true);
-                                allowSpace = true;
-                                break;
-                        case 6:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "I'm leaving";
-                                //return to main menu
-                                break;  
-                }
+}
+public void ChoicebFunct(){
+        switch (primeInt) {
+                case 2:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Skip";
+                        primeInt = 3;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 5:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "That's so cool, it's almost as if I expect that from a food store";
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        primeInt = 6;
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 6:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "I'm leaving";
+                        //return to main menu
+                        break;  
         }
-        public void ChoicecFunct(){
-                switch (primeInt) {
-                        case 2:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "Hello there random stranger";
-                                primeInt = 5;
-                                Choicea.SetActive(false);
-                                Choiceb.SetActive(false);
-                                Choicec.SetActive(false);
-                                nextButton.SetActive(true);
-                                allowSpace = true;
-                                break;
-                        case 5:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "Wow";
-                                Choicea.SetActive(false);
-                                Choiceb.SetActive(false);
-                                Choicec.SetActive(false);
-                                primeInt = 6;
-                                nextButton.SetActive(true);
-                                allowSpace = true;
-                                break;
-                        case 6:
-                                Char1name.text = "YOU";
-                                Char1speech.text = "Here we go";
-                                SceneManager.LoadScene("SceneEntrance");
-                                break;
-                }
+}
+public void ChoicecFunct(){
+        switch (primeInt) {
+                case 2:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Hello there random stranger";
+                        primeInt = 5;
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 5:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Wow";
+                        Choicea.SetActive(false);
+                        Choiceb.SetActive(false);
+                        Choicec.SetActive(false);
+                        primeInt = 6;
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 6:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Here we go";
+                        SceneManager.LoadScene("SceneEntrance");
+                        break;
         }
+}
 }
