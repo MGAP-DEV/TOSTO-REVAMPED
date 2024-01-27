@@ -202,7 +202,7 @@ public void Next(){
         else if (primeInt == 27) {
                 Char1name.text = $"{name}";
                 Char1speech.text = "I have no idea what those items were, I'm sure a walk through the store may help you find them. They’re hard to miss...";
-                primeInt++;
+                primeInt = 5;
         }
         else if (primeInt == 30){
                 //how the game works
