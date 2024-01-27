@@ -57,6 +57,7 @@ public void Next(){
         if (primeInt == 1){
                 // audioSource1.Play();
                 primeInt++;
+                Next();
         }
         else if (primeInt == 2){
                 ArtChar1a.SetActive(true);
