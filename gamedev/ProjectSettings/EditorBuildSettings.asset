@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneEntrance.unity
     guid: 9633124d3da99cf458c40354024396f9
+  - enabled: 1
+    path: Assets/Scenes/SceneStorage.unity
+    guid: 30519ca7ecd70824ba64bb87781b2454
   m_configObjects: {}
