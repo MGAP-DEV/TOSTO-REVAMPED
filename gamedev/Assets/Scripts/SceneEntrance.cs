@@ -131,6 +131,9 @@ public void Next(){
                         ChoiceTxt1.text = "This place is pretty weird";
                         ChoiceTxt2.text = "WAIT WAIT WAIT, I want to ask more questions please, I didn't mean to leave so soon :(";
                         ChoiceTxt3.text = "Thanks for all the help, I will get all the groceries I came for";
+                        Choicea1.SetActive(true);
+                        Choiceb1.SetActive(true);
+                        Choicec1.SetActive(true);
                         break;
                 case 9:
                         Char1name.text = $"{name}";
