@@ -91,7 +91,6 @@ public void Next(){
                         break;
                 case 5:
                         //bbs
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -103,7 +102,6 @@ public void Next(){
                         Choicec1.SetActive(true);
                         break;
                 case 6:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -115,7 +113,6 @@ public void Next(){
                         Choicec1.SetActive(true);
                         break;
                 case 7:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -125,7 +122,7 @@ public void Next(){
                         break;
                 case 8:
                         Char1name.text = $"{name}";
-                        Char1speech.text = "Well I hope you're finally smart enough to fend for  yourself out there";
+                        Char1speech.text = "Well I hope you're finally smart enough to fend for yourself out there";
                         nextButton.SetActive(false);
                         allowSpace = false;
                         ChoiceTxt1.text = "This place is pretty weird";
@@ -141,12 +138,12 @@ public void Next(){
                         primeInt++;
                         break;
                 case 10:
+                        ArtChar1a.SetActive(false);
                         Char1name.text = "";
                         Char1speech.text = "*He Disappears*";
                         primeInt++;
                         break;
                 case 11:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "You are left with a choice as to where you want to go...";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -160,7 +157,6 @@ public void Next(){
                         primeInt++;
                         break;
                 case 21:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Any better questions?";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -202,7 +198,6 @@ public void Next(){
                         primeInt++;
                         break;
                 case 27:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "I have no idea what those items were, I'm sure a walk through the store may help you find them. They’re hard to miss...";
                         primeInt = 5;
                         break;
@@ -227,8 +222,11 @@ public void Next(){
                         primeInt = 33;
                         break;
                 case 33:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Anyways, click any of those options when they appear and you'll be fine.";
+                        break;
+                case 34:
+                        Char1speech.text = "You'll run into options like “Go to the milk section” and such, and if you want to go there, you press that";
+                        primeInt = 5;
                         break;
         }
 }
@@ -238,7 +236,7 @@ public void Choicea1Funct(){
                 case 2:
                         Char1name.text = "YOU";
                         Char1speech.text = "Yes, I have never been to such a place before";
-                        primeInt = 4;
+                        primeInt = 5;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);

@@ -70,7 +70,6 @@ public void Next(){
                         primeInt++;
                         break;
                 case 4:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "You get an introduction anyways";
                         primeInt++;
                         break;
