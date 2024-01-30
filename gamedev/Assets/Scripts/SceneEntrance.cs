@@ -194,11 +194,11 @@ public void Next(){
                         break;
                 case 26:
                         Char1name.text = $"{name}";
-                        Char1speech.text = "Boy I'm glad you asked. You have a total of 6 different items, but it's your list";
+                        Char1speech.text = "Boy, I'm glad you asked. You have a total of 6 different items.";
                         primeInt++;
                         break;
                 case 27:
-                        Char1speech.text = "I have no idea what those items were, I'm sure a walk through the store may help you find them. They’re hard to miss...";
+                        Char1speech.text = "I don't know what those items are, but I'm sure a walk through the store may help you find them. They're hard to miss...";
                         primeInt = 5;
                         break;
                 case 30:
@@ -223,6 +223,7 @@ public void Next(){
                         break;
                 case 33:
                         Char1speech.text = "Anyways, click any of those options when they appear and you'll be fine.";
+                        primeInt++;
                         break;
                 case 34:
                         Char1speech.text = "You'll run into options like “Go to the milk section” and such, and if you want to go there, you press that";
