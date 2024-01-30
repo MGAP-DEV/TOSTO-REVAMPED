@@ -31,15 +31,13 @@ void Start(){
         Choicec.SetActive(false);
         nextButton.SetActive(true);
         name = "Bob";
-   }
+}
 
 void Update(){        
-        if (allowSpace == true){
-                if (Input.GetKeyDown("space")){
-                       Next();
-                }
+        if (allowSpace == true && Input.GetKeyDown("space")){
+                Next();
         }
-   }
+}
 
 public void Next(){
         switch (primeInt) {

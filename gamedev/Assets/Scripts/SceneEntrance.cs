@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Entrance : MonoBehaviour {
+public class Scene_Entrance : MonoBehaviour {
         public int primeInt = 1;
         public Text Char1name;
         public Text Char1speech;
@@ -45,13 +45,13 @@ void Start(){
         Choiced2.SetActive(false);
         nextButton.SetActive(true);
         name = "Ach Triple D";
-   }
+}
 
 void Update(){        
         if (allowSpace == true && Input.GetKeyDown("space")){
                 Next();
         }
-   }
+}
 
 public void Next(){
         switch (primeInt) {
@@ -246,15 +246,19 @@ public void Next(){
                         primeInt++;
                         break;
                 case 44:
-                        Char1speech.text = "Charming works by choosing the right dialogue options for each character.\nChoosing the incorrect options will cause them to lower their opinion of you."
+                        Char1speech.text = "Charming works by choosing the right dialogue options for each character.";
                         primeInt++;
                         break;
                 case 45:
-                        Char1speech.text = "By reaching high enough ratings, they will follow you peacefully. But if you continue to choose the wrong answers, then you will be forced to fight them.";
+                        Char1speech.text = "Choosing the incorrect options will cause them to lower their opinion of you.";
                         primeInt++;
                         break;
                 case 46:
-                        Char1speech.text = "That's how ya do it. Anyways, don't you have a shopping list to complete? I'll be somewhere around if you need me, or need a joint to smoke";
+                        Char1speech.text = "By reaching high enough ratings, they will follow you. If you continue to choose the wrong answers, then you'll be forced to fight them.";
+                        primeInt++;
+                        break;
+                case 47:
+                        Char1speech.text = "Anyways, don't you have a shopping list to complete? I'll be somewhere around if you need me, or need a joint to smoke";
                         primeInt = 5;
                         break;
         }
