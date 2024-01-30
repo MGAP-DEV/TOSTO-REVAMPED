@@ -32,7 +32,6 @@ public class Entrance : MonoBehaviour {
        //public AudioSource audioSource1;
         private bool allowSpace = true;
 
-// Initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
@@ -48,16 +47,12 @@ void Start(){
         name = "Ach Triple D";
    }
 
-// Use the spacebar as a faster "Next" button:
 void Update(){        
-        if (allowSpace == true){
-                if (Input.GetKeyDown("space")){
-                       Next();
-                }
+        if (allowSpace == true && Input.GetKeyDown("space")){
+                Next();
         }
    }
 
-//Story Units! The main story function. Players hit [NEXT] to progress to the next primeInt:
 public void Next(){
         switch (primeInt) {
                 case 1:
@@ -108,9 +103,6 @@ public void Next(){
                         ChoiceTxt1.text = "Charming";
                         ChoiceTxt2.text = "Fighting";
                         ChoiceTxt3.text = "Even more Options";
-                        Choicea1.SetActive(true);
-                        Choiceb1.SetActive(true);
-                        Choicec1.SetActive(true);
                         break;
                 case 7:
                         Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
@@ -229,6 +221,42 @@ public void Next(){
                         Char1speech.text = "You'll run into options like “Go to the milk section” and such, and if you want to go there, you press that";
                         primeInt = 5;
                         break;
+                case 40:
+                        //charming
+                        Char1name.text = $"{name}";
+                        Char1speech.text = "So you want to know about charming, huh? Heh, sure thing.";
+                        primeInt++;
+                        break;
+                case 41:
+                        Char1speech.text = "I'm a bit of a flirt myself, you know. I bet it could still work. You sure you wanna learn?";
+                        nextButton.SetActive(false);
+                        allowSpace = false;
+                        ChoiceTxt1.text = "No";
+                        ChoiceTxt3.text = "Hoping you could teach me a thing or two";
+                        Choicea1.SetActive(true);
+                        Choicec1.SetActive(true);
+                        break;
+                case 42:
+                        Char1name.text = $"{name}";
+                        Char1speech.text = "Well, you've come to the right place!\nNow. Here's how you flirt…";
+                        primeInt++;
+                        break;
+                case 43:
+                        Char1speech.text = "Charming or flirting is one way that you can acquire your groceries. If you don't wish to fight, then this is the best way";
+                        primeInt++;
+                        break;
+                case 44:
+                        Char1speech.text = "Charming works by choosing the right dialogue options for each character.\nChoosing the incorrect options will cause them to lower their opinion of you."
+                        primeInt++;
+                        break;
+                case 45:
+                        Char1speech.text = "By reaching high enough ratings, they will follow you peacefully. But if you continue to choose the wrong answers, then you will be forced to fight them.";
+                        primeInt++;
+                        break;
+                case 46:
+                        Char1speech.text = "That's how ya do it. Anyways, don't you have a shopping list to complete? I'll be somewhere around if you need me, or need a joint to smoke";
+                        primeInt = 5;
+                        break;
         }
 }
 
@@ -248,6 +276,15 @@ public void Choicea1Funct(){
                         Char1name.text = "YOU";
                         Char1speech.text = "Why am I here?";
                         primeInt = 20;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 6:
+                        primeInt = 40;
+                        Next();
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
@@ -295,7 +332,15 @@ public void Choicea1Funct(){
                         nextButton.SetActive(true);
                         allowSpace = true;
                         break;
-
+                case 41:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Seriously?.\nYour loss man, but I don't mind. Ask me again if you feel more comfortable with it";
+                        primeInt = 5;
+                        Choicea1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
         }
 }
 public void Choiceb1Funct(){
@@ -399,6 +444,15 @@ public void Choicec1Funct(){
                         primeInt = 32;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 41:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Hoping you could teach me a thing or two";
+                        primeInt = 42;
+                        Choicea1.SetActive(false);
                         Choicec1.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;
