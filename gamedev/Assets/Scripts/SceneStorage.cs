@@ -49,8 +49,15 @@ public void Next(){
                         ArtChar1a.SetActive(true);
                         DialogueDisplay.SetActive(true);
                         Char1name.text = "";
-                        Char1speech.text = "You enter long and tall rows of many many items. Where do you want to explore?";
-                        break;
+                        Char1speech.text = "Row one";
+                        ChoiceTxt1.text = "The row with all the canned items";
+                        ChoiceTxt2.text = "Row 800";
+                        ChoiceTxt3.text = "Taste Test Station";
+                        Choicea.SetActive(true);
+                        Choiceb.SetActive(true);
+                        Choicec.SetActive(true);
+                break;
+
         }
 }
 
