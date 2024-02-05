@@ -261,6 +261,19 @@ public void Next(){
                         Char1speech.text = "Anyways, don't you have a shopping list to complete? I'll be somewhere around if you need me, or need a joint to smoke";
                         primeInt = 5;
                         break;
+                case 48:
+                        Char1speech.text = "What do you want to know about fighting?  You know, it’s against the rules, but I'm not gonna stop you.";
+                        nextButton.SetActive(false);
+                        allowSpace = false;
+                        ChoiceTxt1.text = "Nothing";
+                        ChoiceTxt2.text = "Hoping you could teach me a thing or two..."
+                        ChoiceTxt3.text = "Oh sorry, I don't want to learn anymore to fight anymore";
+                        Choicea1.SetActive(true);
+                        Choiceb1.SetActive(true);
+                        Choicec1.SetActive(true);
+                        break;
+                case 49:
+
         }
 }
 
@@ -338,7 +351,7 @@ public void Choicea1Funct(){
                         break;
                 case 41:
                         Char1name.text = "YOU";
-                        Char1speech.text = "Seriously?.\nYour loss man, but I don't mind. Ask me again if you feel more comfortable with it";
+                        Char1speech.text = "Seriously?.\nYour loss man, but I don't mind. Ask me again if you feel more comfortable with it.";
                         primeInt = 5;
                         Choicea1.SetActive(false);
                         Choicec1.SetActive(false);
@@ -362,6 +375,15 @@ public void Choiceb1Funct(){
                 case 5:
                         primeInt = 30;
                         Next();
+                        break;
+                case 6:
+                        primeInt = 48;
+                        Next();
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
                         break;
                 case 8:
                         Char1name.text = "YOU";
