@@ -52,7 +52,7 @@ public void Next(){
                         ArtChar1a.SetActive(true);
                         DialogueDisplay.SetActive(true);
                         Char1name.text = $"{name}";
-                        Char1speech.text = $"Hi, welcome to Tosto. I'm Ach Triple D (pronounced eh-che triple dee) but you call me Triple D";
+                        Char1speech.text = "Hi, welcome to Tosto. I'm Ach Triple D (pronounced eh-che triple dee) but you call me Triple D";
                         nextButton.SetActive(false);
                         allowSpace = false;
                         ChoiceTxt1.text = "Hi!";
