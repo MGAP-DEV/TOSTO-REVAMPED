@@ -51,7 +51,7 @@ public void Next(){
                         ArtChar1a.SetActive(true);
                         DialogueDisplay.SetActive(true);
                         Char1name.text = "";
-                        Char1speech.text = "";
+                        Char1speech.text = "You enter long and tall rows of many many items. Where do you want to explore?";
                         break;
         }
 }
