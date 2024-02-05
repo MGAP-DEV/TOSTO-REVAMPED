@@ -35,7 +35,7 @@ void Start(){
         Choicec.SetActive(false);
         Choiced.SetActive(false);
         nextButton.SetActive(true);
-        name = "Bob";
+        name = "";
 }
 
 void Update(){        
@@ -53,8 +53,18 @@ public void Next(){
                 case 2:
                         ArtChar1a.SetActive(true);
                         DialogueDisplay.SetActive(true);
-                        Char1name.text = "";
-                        Char1speech.text = "";
+                        Char1name.text = $"{name}";
+                        Char1speech.text = "You enter the clothing room. Where do you want to explore?";
+                        nextButton.SetActive(false);
+                        allowSpace = false;
+                        ChoiceTxt1.text = "Unturned paper";
+                        ChoiceTxt2.text = "Clothing piles";
+                        ChoiceTxt3.text = "shoe boxes";
+                        ChoiceTxt4.text = "clothing rack";
+                        Choicea.SetActive(true);
+                        Choiceb.SetActive(true);
+                        Choicec.SetActive(true);
+                        Choiced.SetActive(true);
                         break;
         }
 }
