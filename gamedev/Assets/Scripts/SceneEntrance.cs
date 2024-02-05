@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Entrance : MonoBehaviour {
+public class Scene_Entrance : MonoBehaviour {
         public int primeInt = 1;
         public Text Char1name;
         public Text Char1speech;
@@ -32,7 +32,6 @@ public class Entrance : MonoBehaviour {
        //public AudioSource audioSource1;
         private bool allowSpace = true;
 
-// Initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
@@ -46,18 +45,14 @@ void Start(){
         Choiced2.SetActive(false);
         nextButton.SetActive(true);
         name = "Ach Triple D";
-   }
+}
 
-// Use the spacebar as a faster "Next" button:
 void Update(){        
-        if (allowSpace == true){
-                if (Input.GetKeyDown("space")){
-                       Next();
-                }
+        if (allowSpace == true && Input.GetKeyDown("space")){
+                Next();
         }
-   }
+}
 
-//Story Units! The main story function. Players hit [NEXT] to progress to the next primeInt:
 public void Next(){
         switch (primeInt) {
                 case 1:
@@ -91,7 +86,6 @@ public void Next(){
                         break;
                 case 5:
                         //bbs
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -103,19 +97,14 @@ public void Next(){
                         Choicec1.SetActive(true);
                         break;
                 case 6:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
                         nextButton.SetActive(false);
                         allowSpace = false;
                         ChoiceTxt1.text = "Charming";
                         ChoiceTxt2.text = "Fighting";
                         ChoiceTxt3.text = "Even more Options";
-                        Choicea1.SetActive(true);
-                        Choiceb1.SetActive(true);
-                        Choicec1.SetActive(true);
                         break;
                 case 7:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Ask me anything, I'm very big brain, let me help you out...";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -125,7 +114,7 @@ public void Next(){
                         break;
                 case 8:
                         Char1name.text = $"{name}";
-                        Char1speech.text = "Well I hope you're finally smart enough to fend for  yourself out there";
+                        Char1speech.text = "Well I hope you're finally smart enough to fend for yourself out there";
                         nextButton.SetActive(false);
                         allowSpace = false;
                         ChoiceTxt1.text = "This place is pretty weird";
@@ -141,12 +130,12 @@ public void Next(){
                         primeInt++;
                         break;
                 case 10:
+                        ArtChar1a.SetActive(false);
                         Char1name.text = "";
                         Char1speech.text = "*He Disappears*";
                         primeInt++;
                         break;
                 case 11:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "You are left with a choice as to where you want to go...";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -160,7 +149,6 @@ public void Next(){
                         primeInt++;
                         break;
                 case 21:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Any better questions?";
                         nextButton.SetActive(false);
                         allowSpace = false;
@@ -198,12 +186,11 @@ public void Next(){
                         break;
                 case 26:
                         Char1name.text = $"{name}";
-                        Char1speech.text = "Boy I'm glad you asked. You have a total of 6 different items, but it's your list";
+                        Char1speech.text = "Boy, I'm glad you asked. You have a total of 6 different items.";
                         primeInt++;
                         break;
                 case 27:
-                        Char1name.text = $"{name}";
-                        Char1speech.text = "I have no idea what those items were, I'm sure a walk through the store may help you find them. They’re hard to miss...";
+                        Char1speech.text = "I don't know what those items are, but I'm sure a walk through the store may help you find them. They're hard to miss...";
                         primeInt = 5;
                         break;
                 case 30:
@@ -227,8 +214,52 @@ public void Next(){
                         primeInt = 33;
                         break;
                 case 33:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "Anyways, click any of those options when they appear and you'll be fine.";
+                        primeInt++;
+                        break;
+                case 34:
+                        Char1speech.text = "You'll run into options like “Go to the milk section” and such, and if you want to go there, you press that";
+                        primeInt = 5;
+                        break;
+                case 40:
+                        //charming
+                        Char1name.text = $"{name}";
+                        Char1speech.text = "So you want to know about charming, huh? Heh, sure thing.";
+                        primeInt++;
+                        break;
+                case 41:
+                        Char1speech.text = "I'm a bit of a flirt myself, you know. I bet it could still work. You sure you wanna learn?";
+                        nextButton.SetActive(false);
+                        allowSpace = false;
+                        ChoiceTxt1.text = "No";
+                        ChoiceTxt3.text = "Hoping you could teach me a thing or two";
+                        Choicea1.SetActive(true);
+                        Choicec1.SetActive(true);
+                        break;
+                case 42:
+                        Char1name.text = $"{name}";
+                        Char1speech.text = "Well, you've come to the right place!\nNow. Here's how you flirt…";
+                        primeInt++;
+                        break;
+                case 43:
+                        Char1speech.text = "Charming or flirting is one way that you can acquire your groceries. If you don't wish to fight, then this is the best way";
+                        primeInt++;
+                        break;
+                case 44:
+                        Char1speech.text = "Charming works by choosing the right dialogue options for each character.";
+                        primeInt++;
+                        break;
+                case 45:
+                        Char1speech.text = "Choosing the incorrect options will cause them to lower their opinion of you.";
+                        primeInt++;
+                        break;
+                case 46:
+                        Char1speech.text = "By reaching high enough ratings, they will follow you. If you continue to choose the wrong answers, then you'll be forced to fight them.";
+                        primeInt++;
+                        break;
+                case 47:
+                        Char1speech.text = "Anyways, don't you have a shopping list to complete? I'll be somewhere around if you need me, or need a joint to smoke";
+                        primeInt = 5;
                         break;
         }
 }
@@ -238,7 +269,7 @@ public void Choicea1Funct(){
                 case 2:
                         Char1name.text = "YOU";
                         Char1speech.text = "Yes, I have never been to such a place before";
-                        primeInt = 4;
+                        primeInt = 5;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
@@ -249,6 +280,15 @@ public void Choicea1Funct(){
                         Char1name.text = "YOU";
                         Char1speech.text = "Why am I here?";
                         primeInt = 20;
+                        Choicea1.SetActive(false);
+                        Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 6:
+                        primeInt = 40;
+                        Next();
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
                         Choicec1.SetActive(false);
@@ -296,7 +336,15 @@ public void Choicea1Funct(){
                         nextButton.SetActive(true);
                         allowSpace = true;
                         break;
-
+                case 41:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Seriously?.\nYour loss man, but I don't mind. Ask me again if you feel more comfortable with it";
+                        primeInt = 5;
+                        Choicea1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
         }
 }
 public void Choiceb1Funct(){
@@ -400,6 +448,15 @@ public void Choicec1Funct(){
                         primeInt = 32;
                         Choicea1.SetActive(false);
                         Choiceb1.SetActive(false);
+                        Choicec1.SetActive(false);
+                        nextButton.SetActive(true);
+                        allowSpace = true;
+                        break;
+                case 41:
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Hoping you could teach me a thing or two";
+                        primeInt = 42;
+                        Choicea1.SetActive(false);
                         Choicec1.SetActive(false);
                         nextButton.SetActive(true);
                         allowSpace = true;

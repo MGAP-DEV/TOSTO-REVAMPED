@@ -34,15 +34,13 @@ void Start(){
         nextButton.SetActive(true);
         name = "Ach Triple D";
         audioSource1.Play();
-   }
+}
 
 void Update(){        
-        if (allowSpace == true){
-                if (Input.GetKeyDown("space")){
-                       Next();
-                }
+        if (allowSpace == true && Input.GetKeyDown("space")){
+                Next();
         }
-   }
+}
 
 public void Next(){
         switch (primeInt) {
@@ -60,8 +58,8 @@ public void Next(){
                         ChoiceTxt1.text = "Hi!";
                         ChoiceTxt2.text = "Skip (Must beat game first or pay ₫360000)";
                         ChoiceTxt3.text = "Hello there random stranger";
-                        Choicea.SetActive(true); // function ChoiceaFunct()
-                        Choiceb.SetActive(true); // function ChoicebFunct()
+                        Choicea.SetActive(true);
+                        Choiceb.SetActive(true);
                         Choicec.SetActive(true);
                         break;
                 case 3:
@@ -70,7 +68,6 @@ public void Next(){
                         primeInt++;
                         break;
                 case 4:
-                        Char1name.text = $"{name}";
                         Char1speech.text = "You get an introduction anyways";
                         primeInt++;
                         break;

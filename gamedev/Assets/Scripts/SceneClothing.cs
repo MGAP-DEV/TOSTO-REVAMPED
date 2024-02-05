@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class Scene_Clothing : MonoBehaviour {
-        // These are the script variables.
-        // For more character images or buttons, duplicate the ArtChar ones listed here and renumber.
         public int primeInt = 1;
         public Text Char1name;
         public Text Char1speech;
@@ -16,7 +14,6 @@ public class Scene_Clothing : MonoBehaviour {
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
-        //public GameObject ArtBG2;
         public GameObject Choicea;
         public Text ChoiceTxt1;
         public GameObject Choiceb;
@@ -29,30 +26,24 @@ public class Scene_Clothing : MonoBehaviour {
        //public AudioSource audioSource1;
         private bool allowSpace = true;
 
-// Initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtBG1.SetActive(true);
-        //ArtBG2.SetActive(false);
         Choicea.SetActive(false);
         Choiceb.SetActive(false);
         Choicec.SetActive(false);
         Choiced.SetActive(false);
         nextButton.SetActive(true);
         name = "Bob";
-   }
+}
 
-// Use the spacebar as a faster "Next" button:
 void Update(){        
-        if (allowSpace == true){
-                if (Input.GetKeyDown("space")){
-                       Next();
-                }
+        if (allowSpace == true && Input.GetKeyDown("space")){
+                Next();
         }
-   }
+}
 
-//Story Units! The main story function. Players hit [NEXT] to progress to the next primeInt:
 public void Next(){
         switch (primeInt) {
                 case 1:
@@ -67,8 +58,6 @@ public void Next(){
                         break;
         }
 }
-
-// FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
 public void Choicea2Funct(){
         switch (primeInt) {
                 case 2:
