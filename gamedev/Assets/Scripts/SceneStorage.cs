@@ -64,7 +64,7 @@ public void Choice4bFunct(){
         switch (primeInt) {
                 case 2:
                         break;
-        }         
+        }
 }
 public void Choice4cFunct(){
         switch (primeInt) {
