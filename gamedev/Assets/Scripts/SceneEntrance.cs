@@ -215,7 +215,7 @@ public void Next(){
                         break;
                 case 33:
                         Char1speech.text = "Anyways, click any of those options when they appear and you'll be fine.";
-                        primeInt++;
+                        primeInt = 34;
                         break;
                 case 34:
                         Char1speech.text = "You'll run into options like “Go to the milk section” and such, and if you want to go there, you press that";
