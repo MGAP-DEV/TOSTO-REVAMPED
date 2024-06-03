@@ -266,14 +266,12 @@ public void Next(){
                         nextButton.SetActive(false);
                         allowSpace = false;
                         ChoiceTxt1.text = "Nothing";
-                        ChoiceTxt2.text = "Hoping you could teach me a thing or two..."
+                        ChoiceTxt2.text = "Hoping you could teach me a thing or two...";
                         ChoiceTxt3.text = "Oh sorry, I don't want to learn anymore to fight anymore";
                         Choicea1.SetActive(true);
                         Choiceb1.SetActive(true);
                         Choicec1.SetActive(true);
                         break;
-                case 49:
-
         }
 }
 
